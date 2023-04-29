@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+.blog {
+    padding: 1px;
+    background-color: #fff;
+}
+.blog h4{
+    font-size: 30px;
+    margin: 20px!important;
+}
+.blog .flex{
+    display: flex;
+}
+.blog .blog_box{
+    margin: 5px;
+    padding: 10px;
+    width: 450px;
+    background-color: #fff;
+    color: rgb(48, 47, 47);
+}
+.blog_box .date{
+    font-size: 15px;
+}
+.blog_box .blog_title{
+    color: #82B7DF;
+    padding: 20px 10px;
+}
+.blog_box .blog_content{
+    padding: 20px 10px;
+}
+.blog_box .tags{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}

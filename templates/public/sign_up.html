@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/sign_in.css')}}">
+    <script src="https://kit.fontawesome.com/fac00af1c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="nav">
+    <a href="/"><h2><i class="fa fa-arrow-left"></i> back to home</h2></a>
+</div>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form id="form" action="" method="POST">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fas fa-user"></i>
+                        <input id="nameInput" type="text" placeholder="Name" name="name" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" name="passwd" required>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </div>
+                <div class="btn-field">
+                    <a href="/sign_up" ><button type="button" id="signupBtn"> Sign Up</button></a>
+                    <a href="/sign_in" class="disable"><button type="button" id="signinBtn"> Sign in </button> </a>
+                </div>
+            </form>
+        </div>        
+    </div>
+<!-- 
+<script>
+    let signupBtn = document.getElementById('signupBtn')
+    let signinBtn = document.getElementById('signinBtn')
+    let nameField = document.getElementById('nameField')
+    let nameInput = document.getElementById('nameInput')    
+    let title = document.getElementById('title')
+    let form = document.getElementById('form')
+
+    signinBtn.onclick = function(){
+        nameField.style.maxHeight = '0'
+        nameInput.removeAttribute('required')
+        title.innerHTML = 'Sign In'
+        signupBtn.classList.add('disable')
+        signinBtn.classList.remove('disable')
+        form.setAttribute('method', "GET")
+    }
+    signupBtn.onclick = function(){
+        nameField.style.maxHeight = '65px'
+        title.innerHTML = 'Sign Up'
+        signinBtn.classList.add('disable')
+        signupBtn.classList.remove('disable')
+        form.setAttribute('method', "POST")
+    }
+
+</script> -->
+
+</body>
+</html>

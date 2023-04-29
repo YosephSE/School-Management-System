@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creat post</title>
+  <link rel="stylesheet" href="{{url_for ('static', filename='styles/post.css')}}">
+  <script src="https://kit.fontawesome.com/fac00af1c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="menu">
+            <div class="title">
+                <i class="fa fa-bars"></i>
+                <h1>Admin Section</h1>
+            </div>
+            <a href="admin" id="home_btn">Home <i class="fa fa-home"></i></a>
+            <a href="#" id="blog_btn">post blog <i class="fa fa-newspaper"></i></a>
+        </div>
+        <div class="main-content">
+          <div class="crud_blog" id="blog">
+            <h1>Create a Post</h1>
+            <form action="/post" method="post">
+              <input type="text" placeholder="post title" name="title" required>
+              <textarea name="content" id="" required cols="30" rows="5" placeholder="write your post content here"></textarea>
+              <input type="text" name='tags' placeholder="#tags">
+              <button type="submit">POST</button>
+            </form>
+          </div>
+          <div class="recent_post">
+            <h2 class="rp">Recent posts</h2>
+            <div class="post_box">
+              <!-- <div class="posts">
+                <div>
+                  <p class="Ptime"><i>posted on</i><br><i class="fa fa-calendar"></i> April 39, 2023 11:45AM</p>
+                  <h2 class="Ptitle">school meeting </h2>
+                  <p class="Pcontent">Content of the post</p>
+                  <form>
+                    <div class="btns">
+                      <i class="fa fa-trash"></i>
+                      <button type="submit"> Delete</button>
+                    </div>
+                  </form>
+                </div>
+              </div> -->
+              <!-- <div class="posts">
+              <div>
+                <p class="Ptime"><i>posted on</i><br><i class="fa fa-calendar"></i> April 39, 2023 11:45AM</p>
+                <h2 class="Ptitle">school meeting </h2>
+                <p class="Pcontent">Content of the post</p>
+                <form>
+                  <div class="btns">
+                    <i class="fa fa-trash"></i>
+                    <button type="submit"> Delete</button>
+                  </div>
+                </form>
+              </div>
+            </div> -->
+            {% for post in posts %}
+              <div class="posts">
+                <div>
+                  <p class="Ptime"><i>posted on</i><br><i class="fa fa-calendar"></i> {{ post[1]}}</p>
+                  <h2 class="Ptitle">{{ post[2] }}</h2>
+                  <p class="Pcontent">{{post[3]}}</p>
+                  <form method="post" action="{{ url_for('delete_post', post_id=post[0]) }}">
+                    <div class="btns">
+                      <i class="fa fa-trash"></i>
+                      <button class="delete" type="submit"> Delete</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Dongle&family=Kanit&family=Poppins:wght@300;400;500;600&family=Raleway:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+.admin-container{
+    width: 100%;
+    min-height: 100vh;
+    height: auto; 
+    background-color: #fff;
+    display: flex;
+    position: relative;
+}
+.menu{
+    width: 20%;
+    background: #82B7DF;
+}
+.menu .title{
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.938);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu .title i{
+    display: none;
+}
+.menu h1{
+    display: block;
+    font-size: 25px;
+}
+@media (max-width: 900px){
+    .menu .title i{
+        display: block;
+    }
+    .menu h1{
+        display: none;
+    }
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+}
+
+/* main content section */
+
+.main-content{
+    width: 100%;
+    padding: 10px;
+}
+.crud_blog{
+    background-color: #82B7DF;
+    padding: 10px;
+    margin: 10px;
+}
+.crud_blog h1{
+    text-transform: capitalize;
+    color: #fff;
+    text-transform: uppercase;
+}
+.crud_blog textarea,
+.crud_blog input {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.crud_blog button{
+    margin: 10px;
+    padding: 6px;
+    width: 120px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: .2s;
+}
+.crud_blog button:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+/* recent post */
+
+.recent_post{
+    background: #000;
+    color: #fff;
+    padding: 20px;
+}
+.recent_post .rp{
+    text-align: center;
+    margin: 10px;
+}
+.recent_post .post_box{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.recent_post .posts{
+    width: 300px;
+    min-height: 20vh;
+    height: auto;
+    padding: 30px ;
+    background: #ebebeb;
+    display: flex;
+    justify-content: start;
+    border-radius: 10px;
+    color: #000;
+}
+
+.posts .fa-pen:hover{
+    color: gray;
+}
+.posts i{
+    color: gray;
+    text-transform: capitalize; 
+    font-size: 12px;
+}
+.posts .fa-calendar{
+    color: #000;
+    font-size: 10px;
+}
+.posts p{
+    margin: 10px 0;
+    font-size: 15px;
+}
+.posts .Ptime{
+    font-size: 14px;
+}
+.posts .Ptitle{
+    margin: 10px 0;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #82B7DF;
+}
+.posts .Pcontent{
+    color: red;
+}
+.posts .btns{
+    width: 80px;
+    border-radius: 2px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.posts .btns button{
+    padding: 5px;
+    background: none;
+    border: none;
+    transition: .2s;
+}
+.posts .btns:hover{
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.644);
+    border: 1px solid rgba(255, 0, 0, 0.644);
+}
+.posts .btns:hover button{
+    color: #fff;
+    cursor: pointer;
+}
+.posts .btns:hover i{
+    color: #fff;
+}

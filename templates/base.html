@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="{{url_for ('static' , filename='styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+  <script src="https://kit.fontawesome.com/fac00af1c1.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='images/favicon.png')}}">
+  <title> {% block title %} Dejazmach Wondirad Senior Secondary School {% endblock %}</title>
+  {% block link %} {% endblock %}
+</head>
+
+
+<body id="top">
+
+    <div class="wrapper row0">
+        <header id="header" class="hoc clear"> 
+            
+    <div id="logo" class="one_quarter first">
+      <h1><a href="index.html"> <img src="{{url_for('static', filename='images/logo.jpeg' )}}" alt="logo of wondirad school" title="Dej Wondirad"></a></h1>
+    </div>
+    <div class="three_quarter">
+      <ul class="nospace clear">
+          <li class="one_third first">
+          <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> +00 (123) 456 7890</span></div>
+        </li>
+        <li class="one_third">
+          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us an Email:</strong> wondirad@gmail.com</span></div>
+        </li>
+        <li class="one_third">
+            <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon - Sat</strong> 07.00Am - 04.00Pm</span></div>
+        </li>
+    </ul>
+</div>
+
+</header>
+</div>
+
+<div class="wrapper row1">
+    <div class="hoc clear"> 
+        
+    <nav id="mainav">
+      <ul class="clear">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a class="drop" href="#">Clubs</a>
+          <ul>
+            <li><a href="/itclub">IT Club</a></li>
+            <li><a href="/SandIclub">Science and Innovation Club</a></li>
+            <!-- <li><a href="Assets/pages/sidebar-left.html">Some club</a></li>
+              <li><a href="/">Some club</a></li> -->
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Staff</a>
+          <ul>
+            <li><a href="/principals">Principals</a></li>
+            <li><a class="drop" href="/teachers">Teachers</a>
+                <ul>
+                    <li><a href="/G9">Grade 9</a></li>
+                    <li><a href="/G10">Grade 10</a></li>
+                    <li><a href="/G11">Grade 11</a></li>
+                    <li><a href="/G12">Grade 12</a></li>
+                  </ul>
+                </li>
+                <li><a href="/staffs">Other Staffs</a></li>
+              </ul>
+            </li>
+            <li><a href="/award">Awards</a></li>
+            <li><a href="/topstudents">Top Students</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/events">Events</a></li>
+          </ul>
+</nav>
+
+</div>
+</div>
+
+{% block content %}{% endblock %}
+
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+
+    <div class="one_quarter first">
+      <h1 class="logoname clear"><a href="index.html">
+        <span>WONDIRAD School</span></a></h1>
+      <p class="btmspace-30">Leo scelerisque at imperdiet in volutpat quis turpis praesent sit amet ante sed erat tempor consequat sed ut nibh nullam sagittis nunc a turpis nec [<a href="#">&hellip;</a>]</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fab fa-google-plus-g"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a class="faicon-vk" href="#"><i class="fab fa-vk"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Felis lobortis pulvinar</h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fas fa-map-marker-alt"></i>
+          <address>
+          Street Name &amp; Number, Town, Postcode/Zip
+          </address>
+        </li>
+        <li><i class="fas fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fas fa-fax"></i> +00 (123) 456 7890</li>
+        <li><i class="far fa-envelope"></i> info@domain.com</li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">In cursus placerat velit</h6>
+      <ul class="nospace linklist">
+        <li><a href="#">Maecenas sem fusce quis</a></li>
+        <li><a href="#">Vel leo semper rhoncus ut</a></li>
+        <li><a href="#">Suscipit pede eu diam class</a></li>
+        <li><a href="#">Aptent taciti sociosqu ad</a></li>
+      </ul>
+    </div>
+    <div class="one_quarter">
+      <h6 class="heading">Litora torquent conubia</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <p class="nospace btmspace-10"><a href="#">Nostra per inceptos himenaeos cras augue est dictum quis&hellip;</a></p>
+            <time class="block font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+          </article>
+        </li>
+        <li>
+          <article>
+            <p class="nospace btmspace-10"><a href="#">Suscipit vel est in pulvinar aliquam vulputate purus in tincidunt&hellip;</a></p>
+            <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+          </article>
+        </li>
+      </ul>
+    </div>
+
+  </footer>
+</div>
+
+
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+
+    <p class="fl_left">Copyright &copy; 2023 - All Rights Reserved - <a href="#">DEJ WONDIRAD</a></p>
+    
+  </div>
+</div>
+
+
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{{url_for('static', filename='scripts/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='scripts/jquery.backtotop.js')}}"></script>
+<script src="{{url_for('static', filename='scripts/jquery.mobilemenu.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+{% extends ("base.html") %}
+
+{% block title %} DEJ Wondirad School | Staffs {% endblock %}
+
+{% block content %}
+<div class="wrapper bgded overlay dark" style="background-image:url('../images/demo/backgrounds/01.png');">
+  <div id="breadcrumb" class="hoc clear"> 
+        <h6 class="heading">Staff</h6>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Staffs</a></li>
+      <li><a href="#">Other Staffs</a></li>
+    </ul>
+      </div>
+</div>
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <div class="content"> 
+      <div id="gallery">
+        <figure>
+          <header class="heading">Bureau workers</header>
+          <ul class="nospace clear">
+            <li class="one_quarter first"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter first"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter first"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+          </ul>
+        </figure>
+      </div>
+
+      <div id="gallery">
+        <figure>
+          <header class="heading">security and janitors</header>
+          <ul class="nospace clear">
+            <li class="one_quarter first"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter first"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter first"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="{{url_for('static', filename='/images/dj.jpg')}}" alt=""></a></li>
+          </ul>
+        </figure>
+      </div>
+
+      <nav class="pagination">
+        <ul>
+          <li><a href="#">&laquo; Previous</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><strong>&hellip;</strong></li>
+          <li><a href="#">6</a></li>
+          <li class="current"><strong>7</strong></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><strong>&hellip;</strong></li>
+          <li><a href="#">14</a></li>
+          <li><a href="#">15</a></li>
+          <li><a href="#">Next &raquo;</a></li>
+        </ul>
+      </nav>
+    </div>
+        <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+{% endblock %}
+
+

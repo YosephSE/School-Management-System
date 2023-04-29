@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+}
+.admin-container{
+    width: 100%;
+    min-height: 100vh;
+    height: auto; 
+    background-color: #fff;
+    display: flex;
+    position: relative;
+}
+.menu{
+    width: 20%;
+    background: #82B7DF;
+}
+.menu .title{
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.938);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu .title i{
+    display: none;
+}
+.menu h1{
+    display: block;
+}
+@media (max-width: 900px){
+    .menu .title i{
+        display: block;
+    }
+    .menu h1{
+        display: none;
+    }
+}
+.menu a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin: 20px;
+}
+
+/* main content section */
+
+.main-content{
+    width: 80%;
+    padding: 10px;
+}
+.top{
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.801);
+    color: #fff;
+    border-radius: 100px;
+}
+.top img{
+    width: 50px;
+    height: 7.5vh;
+}
+.middle {
+    margin: 10px;
+    padding: 20px; 
+    height: auto;
+    background-color: #82B7DF;
+}
+.middle .current_status{
+    margin: 5vh 0; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.current_status div{
+    flex-basis: 20%;
+    padding: 10px;
+    border-radius: 5px; 
+    background-color: rgba(0, 0, 0, 0.801);
+    color: #82B7DF;
+}
+.current_status p{
+    color: #fff;
+}
+.crud_blog{
+    margin: 10px;
+    background-color: #82B7DF;
+    padding: 10px;
+    width: 800px;
+    display: none;
+}
+.crud_blog h1{
+    text-transform: capitalize;
+    font-weight: 800;
+}
+.crud_blog textarea,
+.crud_blog input {
+    display: block;
+    padding: 5px;
+    margin: 2px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.crud_blog button{
+    margin: 10px;
+    padding: 6px;
+    width: 120px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: background .2s;
+}
+.crud_blog button:hover{
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}

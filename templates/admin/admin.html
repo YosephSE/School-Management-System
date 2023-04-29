@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="{{url_for ('static', filename='styles/admin.css')}}">
+    <script src="https://kit.fontawesome.com/fac00af1c1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="menu">
+            <div class="title">
+                <i class="fa fa-bars"></i>
+                <h1>Admin Section</h1>
+            </div>
+            <a href="#" id="home_btn">Home <i class="fa fa-home"></i></a>
+            <a href="post" id="blog_btn">post blog <i class="fa fa-newspaper"></i></a>
+        </div>
+        <div class="main-content">
+            <div class="top">
+                <div class="logo"><img src="{{url_for('static', filename='images/favicon.png')}}" alt=""></div>
+                <h1>Welcome {{ name }}</h1>
+            </div>
+            <div class="middle" id="middle">
+                <div class="current_status">
+                    <div class="students"><i class="fa fa-users"></i><p>Number of students</p></div>
+                    <div class="staffs"><i class="fa fa-clipboard"></i><p>Number of staffs</p></div>
+                    <div class="classroom"><i class="fa fa-school"></i><p>Number of class rooms</p></div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends ("base.html") %}
+
+<title>{% block title %} DEJ Wondirad School | Blog {% endblock %}</title>
+<link rel="stylesheet" href="{{url_for('static', filename='styles/blog.css')}}">
+{% block content %}
+<div class="wrapper bgded overlay dark" style="background-image:url('../images/demo/backgrounds/01.png');">
+    <div id="breadcrumb" class="hoc clear"> 
+      <h6 class="heading">Blog</h6>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+</div>
+    <div class="blog">
+        <h4>Blogs</h4>
+        <div class="flex">
+            {% for post in posts %}
+                <div class="blog_box">
+                    <div class="date"><i class="fa fa-clock"></i>{{ post[1] }}</div>
+                    <p class="blog_title" id="blog_title">{{ post[0] }}</p>
+                    <p class="blog_content">{{ post[3] }}</p>
+                    <div class="tags">
+                        <i class="fa fa-user"></i> <a href="#"> Kassu tumsa </a> | <i class="fa fa-tags"></i> <p class="tag">#Award</p>,<p class="tag">#Announcement</p>
+                    </div>
+                </div>
+            {% endfor %}
+    
+            </div>
+        </div>
+    </div>
+{% endblock %}
