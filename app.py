@@ -50,7 +50,9 @@ def index():
     cur.execute("SELECT * FROM posts ORDER BY ID DESC LIMIT 3;")
     posts = cur.fetchall()
     cur.close()
-    return render_template('public/index.html', posts = posts)
+
+    length = len(posts)
+    return render_template('public/index.html', posts = posts, length = length)
 
 #  routes for clubs
 @app.route('/itclub')

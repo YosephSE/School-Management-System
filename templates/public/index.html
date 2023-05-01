@@ -215,25 +215,27 @@
       <h6 class="heading underline font-x2">Blog</h6>
     </div>
     <ul class="nospace group latest">
-      <li class="one_third first">
-        <article>
-          <time datetime="2045-04-06T08:15+00:00"><i class="far fa-calendar-alt rgtspace-5"></i> 06<sup>th</sup> April 2015 @ 15:00pm</time>
-          <div class="excerpt">
-            <h6 class="heading"><a href="#">Top score</a></h6>
-            <p>wondirad school was awarded for scoring the most highest scores in the subcity.</p>
-            <ul class="meta">
-              <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Kassu tumsa</a></li>
-              <li><i class="fas fa-tags rgtspace-5"></i> <a href="#">#Award</a>, <a href="#">#Announcement</a></li>
-            </ul>
-          </div>
-        </article>
-      </li>
+        <li class="one_third first">
+          <article>
+            <time datetime="2045-04-06T08:15+00:00"><i class="far fa-calendar-alt rgtspace-5"></i> {{ posts[0][1] }}</time>
+            <div class="excerpt">
+              <h6 class="heading"><a href="#">{{ posts[0][2]}}</a></h6>
+              <p>{{ posts[0][3] }}</p>
+              <ul class="meta">
+                <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Kassu tumsa</a></li>
+                <li><i class="fas fa-tags rgtspace-5"></i> <a href="#">#Award</a>, <a href="#">#Announcement</a></li>
+              </ul>
+            </div>
+          </article>
+          
+        </li>
+      {% if length > 1 %}
       <li class="one_third">
         <article>
-          <time datetime="2045-04-05T08:14+00:00"><i class="far fa-calendar-alt rgtspace-5"></i> 05<sup>th</sup> Jan 2015 @ 14:00pm</time>
+          <time datetime="2045-04-05T08:14+00:00"><i class="far fa-calendar-alt rgtspace-5"></i> {{ posts[1][1] }}</time>
           <div class="excerpt">
-            <h6 class="heading"><a href="#">Orientation</a></h6>
-            <p>Today the orientation was given by the school director <a href="#"> #kassutumsa </a>. It helps students to be ready and preprare them for the exams.</p>
+            <h6 class="heading"><a href="#">{{ posts[1][2]}}</a></h6>
+            <p>{{ posts[1][3] }}</p>
             <ul class="meta">
               <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Assechalew Billelegn</a></li>
               <li><i class="fas fa-tags rgtspace-5"></i> <a href="#">#Announcement</a>, #orientation<a href="#">Tag 2</a></li>
@@ -241,12 +243,16 @@
           </div>
         </article>
       </li>
+      {% endif %}
+      {% if length > 2 %}
       <li class="one_third">
         <article>
-          <time datetime="2045-04-04T08:13+00:00"><i class="far fa-calendar-alt rgtspace-5"></i> 04<sup>th</sup> April 2015 @ 13:00pm</time>
+          <time datetime="2045-04-04T08:13+00:00"><i class="far fa-calendar-alt rgtspace-5"></i> {{posts[2][1]}}</time>
           <div class="excerpt">
-            <h6 class="heading"><a href="#">Exam</a></h6>
-            <p> Students must take the model exams serious and try to do them at home several times and refer them</p>
+            <h6 class="heading"><a href="#">{{posts[2][2]}}</a></h6>
+            <ul class="meta">
+            <ul class="meta">
+            <p>{{posts[2][3]}}</p>
             <ul class="meta">
               <li><i class="fas fa-user rgtspace-5"></i> <a href="#">Teshome</a></li>
               <li><i class="fas fa-tags rgtspace-5"></i> <a href="#">#Exam</a>, <a href="#">#Study</a></li>
@@ -254,8 +260,8 @@
           </div>
         </article>
       </li>
+      {% endif %}
     </ul>
-
   </section>
 </div>
 {% endblock %}
