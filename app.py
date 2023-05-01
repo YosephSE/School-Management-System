@@ -35,9 +35,22 @@ app.secret_key = '832445652e`'
 mysql = MySQL(app)
 mail = Mail(app)
 
+# email function
+def send_email(subject, recipient_email, email_content):
+    msg = Message(subject = subject,
+                  recipients=[recipient_email],
+                  sender=app.config.get("MAIL_USERNAME"))
+    msg.body = email_content
+    mail.send(msg)
+
+# route to home
 @app.route('/')
 def index():
-    return render_template('public/index.html')
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM posts ORDER BY ID DESC LIMIT 3;")
+    posts = cur.fetchall()
+    cur.close()
+    return render_template('public/index.html', posts = posts)
 
 #  routes for clubs
 @app.route('/itclub')
@@ -200,4 +213,4 @@ def delete_post(post_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port='81')
+    app.run(debug=True, host='0.0.0.0')
