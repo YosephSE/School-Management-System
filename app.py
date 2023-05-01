@@ -210,7 +210,6 @@ def delete_post(post_id):
     cur.execute("DELETE FROM posts WHERE id = %s", (post_id,))
     mysql.connection.commit()
     cur.close()
-    flash('Post has been deleted', 'success')
     return redirect(url_for('post'))
 
 
