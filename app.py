@@ -13,10 +13,10 @@ import datetime
 app = Flask(__name__)
 
 #connect to MYSQLDB
-app.config['MYSQL_HOST'] = 'sql9.freemysqlhosting.net'
-app.config['MYSQL_USER'] = 'sql9615696'
-app.config['MYSQL_PASSWORD'] = 'QHdb4ldW27'
-app.config['MYSQL_DB'] = 'sql9615696'
+app.config['MYSQL_HOST'] = 'sql8.freemysqlhosting.net'
+app.config['MYSQL_USER'] = 'sql8617385'
+app.config['MYSQL_PASSWORD'] = 'H6qL1s3nm8'
+app.config['MYSQL_DB'] = 'sql8617385'
 app.config['MYSQL_PORT'] = 3306
 
 #connect to mail server
