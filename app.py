@@ -4,7 +4,7 @@ from pymongo import MongoClient
 # import bcrypt to secure passwords
 import bcrypt
 # import flask to mysql connector
-from flask_mysqldb import MySQL
+from flask_mysql_connector import MySQL
 # send mail library
 from flask_mail import Mail, Message
 # import time
@@ -16,8 +16,9 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'sql8.freemysqlhosting.net'
 app.config['MYSQL_USER'] = 'sql8617385'
 app.config['MYSQL_PASSWORD'] = 'H6qL1s3nm8'
-app.config['MYSQL_DB'] = 'sql8617385'
+app.config['MYSQL_DATABASE'] = 'sql8617385'
 app.config['MYSQL_PORT'] = 3306
+
 
 #connect to mail server
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
